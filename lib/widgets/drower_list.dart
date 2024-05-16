@@ -27,10 +27,8 @@ class _DrowerListState extends State<DrowerList> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return SliverList.builder(
       itemCount: drowerListData.length,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
         return GestureDetector(
             onTap: () {
