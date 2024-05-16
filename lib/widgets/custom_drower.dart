@@ -11,37 +11,40 @@ class CustomDrower extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
-        SliverToBoxAdapter(
-          child: UserListTile(
-            image: Assets.imagesAvatar3,
-            title: "Lekan Okeowo",
-            subTitle: "demo@gmail.com",
+    return Container(
+      color: Colors.white,
+      child: const CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserListTile(
+              image: Assets.imagesAvatar3,
+              title: "Lekan Okeowo",
+              subTitle: "demo@gmail.com",
+            ),
           ),
-        ),
-        DrowerList(),
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Column(
-            children: [
-              Expanded(
-                  child: SizedBox(
-                height: 20,
-              )),
-              DrowerInActiveListItem(
-                  leadingIcon: Assets.imagesSettings,
-                  itemTitle: "Setting system"),
-              DrowerInActiveListItem(
-                  leadingIcon: Assets.imagesLogout,
-                  itemTitle: "Logout account"),
-              SizedBox(
-                height: 48,
-              ),
-            ],
+          DrowerList(),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                Expanded(
+                    child: SizedBox(
+                  height: 20,
+                )),
+                DrowerInActiveListItem(
+                    leadingIcon: Assets.imagesSettings,
+                    itemTitle: "Setting system"),
+                DrowerInActiveListItem(
+                    leadingIcon: Assets.imagesLogout,
+                    itemTitle: "Logout account"),
+                SizedBox(
+                  height: 48,
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
