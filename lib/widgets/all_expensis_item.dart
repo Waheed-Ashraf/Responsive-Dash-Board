@@ -11,8 +11,16 @@ class AllExpensisItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isActive
-        ? ActiveExpensisItem(allExpensisItmeModel: allExpensisItmeModel)
-        : InActiveExpensisItem(allExpensisItmeModel: allExpensisItmeModel);
+    return AnimatedCrossFade(
+      crossFadeState:
+          isActive ? CrossFadeState.showFirst : CrossFadeState.showSecond,
+      duration: const Duration(seconds: 1),
+      firstCurve: Curves.easeOut,
+      secondCurve: Curves.easeIn,
+      firstChild:
+          ActiveExpensisItem(allExpensisItmeModel: allExpensisItmeModel),
+      secondChild:
+          InActiveExpensisItem(allExpensisItmeModel: allExpensisItmeModel),
+    );
   }
 }

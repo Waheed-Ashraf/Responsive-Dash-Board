@@ -11,65 +11,68 @@ class ActiveExpensisItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-          side: const BorderSide(
-            width: 1,
-            color: Color(0xfff1f1f1),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        decoration: ShapeDecoration(
+          color: const Color(0xff4EB7F2),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+            side: const BorderSide(
+              width: 1,
+              color: Color(0xfff1f1f1),
+            ),
           ),
         ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 60,
-                height: 60,
-                decoration: ShapeDecoration(
-                    color: const Color(0xFFFFFFFF).withOpacity(.1),
-                    shape: const OvalBorder()),
-                child: Center(
-                  child: SvgPicture.asset(
-                    allExpensisItmeModel.headerImg,
-                    colorFilter:
-                        const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  width: 60,
+                  height: 60,
+                  decoration: ShapeDecoration(
+                      color: const Color(0xFFFFFFFF).withOpacity(.1),
+                      shape: const OvalBorder()),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      allExpensisItmeModel.headerImg,
+                      colorFilter:
+                          const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                    ),
                   ),
                 ),
-              ),
-              const Spacer(),
-              const Icon(
-                Icons.keyboard_arrow_right,
-                color: Color(0xFF064061),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 34,
-          ),
-          Text(
-            allExpensisItmeModel.itmeTitle,
-            style: AppStyles.styleSemiBold16(context),
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Text(
-            allExpensisItmeModel.date,
-            style: AppStyles.styleRegular14(context),
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          Text(
-            allExpensisItmeModel.ammount,
-            style: AppStyles.styleSemiBold24(context),
-          ),
-        ],
-      ),
-    );
+                const Spacer(),
+                const Icon(
+                  Icons.keyboard_arrow_right,
+                  color: Color(0xFFFFFFFF),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 34,
+            ),
+            Text(
+              allExpensisItmeModel.itmeTitle,
+              style: AppStyles.styleSemiBold16(context)
+                  .copyWith(color: Colors.white),
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Text(
+              allExpensisItmeModel.date,
+              style: AppStyles.styleRegular14(context)
+                  .copyWith(color: const Color(0xffFAFAFA)),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              allExpensisItmeModel.ammount,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
+          ],
+        ));
   }
 }

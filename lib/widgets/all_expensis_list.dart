@@ -19,15 +19,15 @@ class _AllExpensisListState extends State<AllExpensisList> {
         date: "April 2022",
         ammount: r"$20,54"),
     AllExpensisItmeModel(
-        headerImg: Assets.imagesBalance,
-        itmeTitle: "Balance",
+        headerImg: Assets.imagesIncome,
+        itmeTitle: "Income",
         date: "April 2022",
-        ammount: r"$20,54"),
+        ammount: r"$9,84"),
     AllExpensisItmeModel(
-        headerImg: Assets.imagesBalance,
-        itmeTitle: "Balance",
+        headerImg: Assets.imagesExpenses,
+        itmeTitle: "Expenses",
         date: "April 2022",
-        ammount: r"$20,54"),
+        ammount: r"$12,69"),
   ];
   @override
   Widget build(BuildContext context) {
