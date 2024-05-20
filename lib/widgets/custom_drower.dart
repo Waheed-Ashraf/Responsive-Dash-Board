@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:responsive_dash_board/models/users_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widgets/inactive_drower_list_item.dart';
 import 'package:responsive_dash_board/widgets/drower_list.dart';
@@ -13,17 +12,18 @@ class CustomDrower extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      child: const CustomScrollView(
+      child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: UserListTile(
-              image: Assets.imagesAvatar3,
-              title: "Lekan Okeowo",
-              subTitle: "demo@gmail.com",
+              usersModel: UsersModel(
+                  image: Assets.imagesAvatar3,
+                  title: "Waheed Ashraf",
+                  subTitle: "washraf124@gmail.com"),
             ),
           ),
-          DrowerList(),
-          SliverFillRemaining(
+          const DrowerList(),
+          const SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
               children: [

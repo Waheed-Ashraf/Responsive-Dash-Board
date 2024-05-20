@@ -42,26 +42,41 @@ class InActiveExpensisItem extends StatelessWidget {
               ),
             ],
           ),
+
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensisItmeModel.itmeTitle,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensisItmeModel.itmeTitle,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensisItmeModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensisItmeModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
+          // const Expanded(
+          //     child: SizedBox(
+          //   height: 8,
+          // )),
+
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensisItmeModel.ammount,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              allExpensisItmeModel.ammount,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

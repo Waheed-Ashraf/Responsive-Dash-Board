@@ -2,14 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader({super.key});
-
+  const AllExpensesHeader(
+      {super.key,
+      required this.title,
+      this.buttonTitle,
+      required this.buttonIcon});
+  final String title;
+  final String? buttonTitle;
+  final IconData buttonIcon;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "All Expenses",
+          title,
           style: AppStyles.styleSemiBold20(context),
         ),
         const Spacer(),
@@ -22,15 +28,16 @@ class AllExpensesHeader extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                "Monthly",
+                buttonTitle ?? "",
                 style: AppStyles.styleMedium16(context),
               ),
-              const SizedBox(
-                width: 18,
-              ),
-              const Icon(
-                Icons.keyboard_arrow_down,
-                color: Color(0xFF064061),
+              if (buttonTitle != null)
+                const SizedBox(
+                  width: 18,
+                ),
+              Icon(
+                buttonIcon,
+                color: const Color(0xFF064061),
               ),
             ],
           ),

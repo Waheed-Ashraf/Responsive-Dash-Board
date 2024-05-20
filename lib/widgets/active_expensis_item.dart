@@ -48,29 +48,44 @@ class ActiveExpensisItem extends StatelessWidget {
                 ),
               ],
             ),
+
             const SizedBox(
               height: 34,
             ),
-            Text(
-              allExpensisItmeModel.itmeTitle,
-              style: AppStyles.styleSemiBold16(context)
-                  .copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensisItmeModel.itmeTitle,
+                style: AppStyles.styleSemiBold16(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
             const SizedBox(
               height: 8,
             ),
-            Text(
-              allExpensisItmeModel.date,
-              style: AppStyles.styleRegular14(context)
-                  .copyWith(color: const Color(0xffFAFAFA)),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensisItmeModel.date,
+                style: AppStyles.styleRegular14(context)
+                    .copyWith(color: const Color(0xffFAFAFA)),
+              ),
             ),
+            // const Expanded(
+            //     child: SizedBox(
+            //   height: 8,
+            // )),
+
             const SizedBox(
               height: 16,
             ),
-            Text(
-              allExpensisItmeModel.ammount,
-              style: AppStyles.styleSemiBold24(context)
-                  .copyWith(color: Colors.white),
+            FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                allExpensisItmeModel.ammount,
+                style: AppStyles.styleSemiBold24(context)
+                    .copyWith(color: Colors.white),
+              ),
             ),
           ],
         ));
