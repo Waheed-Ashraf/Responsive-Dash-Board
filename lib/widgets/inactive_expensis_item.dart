@@ -42,7 +42,6 @@ class InActiveExpensisItem extends StatelessWidget {
               ),
             ],
           ),
-
           const SizedBox(
             height: 34,
           ),
@@ -63,11 +62,6 @@ class InActiveExpensisItem extends StatelessWidget {
               style: AppStyles.styleRegular14(context),
             ),
           ),
-          // const Expanded(
-          //     child: SizedBox(
-          //   height: 8,
-          // )),
-
           const SizedBox(
             height: 16,
           ),
