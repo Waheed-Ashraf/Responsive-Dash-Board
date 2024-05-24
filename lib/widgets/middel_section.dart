@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:responsive_dash_board/widgets/all_expenses.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice.dart';
 
@@ -8,8 +9,8 @@ class MiddelSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(slivers: [
-      SliverList(
-        delegate: SliverChildListDelegate.fixed([
+      SliverToBoxAdapter(
+        child: Column(children: [
           AllExpenses(),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 24),
