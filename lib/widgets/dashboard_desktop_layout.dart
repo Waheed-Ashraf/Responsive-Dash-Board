@@ -11,13 +11,14 @@ class DashboardDesktopLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(flex: 1, child: CustomDrower()),
+        Expanded(flex: 6, child: CustomDrower()),
         Expanded(
-          flex: 3,
+          flex: 13,
           child: MiddelSection(),
         ),
-        Expanded(flex: 2, child: RightSection()),
+        Expanded(flex: 10, child: RightSection()),
       ],
     );
   }
