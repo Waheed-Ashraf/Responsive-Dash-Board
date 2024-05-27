@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_header.dart';
+import 'package:responsive_dash_board/widgets/custom_header.dart';
 import 'package:responsive_dash_board/widgets/custom_container.dart';
 import 'package:responsive_dash_board/widgets/latest_transaction_list.dart';
 import 'package:responsive_dash_board/widgets/quick_invoice_form.dart';
@@ -15,7 +15,7 @@ class QuickInvoice extends StatelessWidget {
       child: CustomContainer(
         padding: 0,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const AllExpensesHeader(
+          const CustomHeader(
             title: "Quick Invoice",
             buttonIcon: Icons.add,
           ),

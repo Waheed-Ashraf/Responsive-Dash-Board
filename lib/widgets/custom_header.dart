@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
-class AllExpensesHeader extends StatelessWidget {
-  const AllExpensesHeader(
+class CustomHeader extends StatelessWidget {
+  const CustomHeader(
       {super.key,
       required this.title,
       this.buttonTitle,
@@ -24,7 +24,7 @@ class AllExpensesHeader extends StatelessWidget {
           decoration: ShapeDecoration(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
-                  side: const BorderSide(width: 1, color: Color(0xffFF1F1F1)))),
+                  side: const BorderSide(width: 1, color: Color(0xffff1f1f1)))),
           child: Row(
             children: [
               Text(
