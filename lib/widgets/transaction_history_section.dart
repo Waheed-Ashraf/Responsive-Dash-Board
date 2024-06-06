@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/models/transaction_history_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 import 'package:responsive_dash_board/widgets/transaction_history_list.dart';
 
