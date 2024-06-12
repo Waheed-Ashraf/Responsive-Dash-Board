@@ -12,10 +12,10 @@ class MiddelSection extends StatelessWidget {
       SliverToBoxAdapter(
         child: Column(children: [
           AllExpenses(),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24),
-            child: QuickInvoice(),
+          SizedBox(
+            height: 24,
           ),
+          QuickInvoice(),
         ]),
       ),
     ]);

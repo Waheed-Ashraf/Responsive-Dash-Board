@@ -17,17 +17,16 @@ class DashBoardTabletLayout extends StatelessWidget {
         Expanded(flex: 6, child: CustomDrower()),
         Expanded(
           flex: 13,
-          child: SingleChildScrollView(
-            child: Column(children: [
-              AllExpenses(),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 24),
-                child: QuickInvoice(),
-              ),
-              Padding(
-                padding: EdgeInsets.only(bottom: 24, right: 24, left: 24),
-                child: CustomContainer(
-                  padding: 0,
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: SingleChildScrollView(
+              child: Column(children: [
+                AllExpenses(),
+                SizedBox(
+                  height: 24,
+                ),
+                QuickInvoice(),
+                CustomContainer(
                   child: Column(
                     children: [
                       MyCardSection(),
@@ -39,12 +38,12 @@ class DashBoardTabletLayout extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 24),
-                child: IncomeSection(),
-              ),
-            ]),
+                SizedBox(
+                  height: 24,
+                ),
+                IncomeSection(),
+              ]),
+            ),
           ),
         ),
       ],

@@ -9,28 +9,25 @@ class IncomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(bottom: 24, right: 24),
-      child: CustomContainer(
-        padding: 0,
-        child: Column(
-          children: [
-            CustomHeader(
-              title: "Income",
-              buttonIcon: Icons.keyboard_arrow_down,
-              buttonTitle: 'Monthly',
-            ),
-            SizedBox(
-              height: 16,
-            ),
-            Row(
-              children: [
-                Expanded(child: IncomeChart()),
-                Expanded(flex: 2, child: IncomeDetails()),
-              ],
-            ),
-          ],
-        ),
+    return const CustomContainer(
+      padding: 0,
+      child: Column(
+        children: [
+          CustomHeader(
+            title: "Income",
+            buttonIcon: Icons.keyboard_arrow_down,
+            buttonTitle: 'Monthly',
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Row(
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(flex: 2, child: IncomeDetails()),
+            ],
+          ),
+        ],
       ),
     );
   }

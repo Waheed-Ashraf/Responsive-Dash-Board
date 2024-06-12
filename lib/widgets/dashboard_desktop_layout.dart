@@ -16,9 +16,17 @@ class DashboardDesktopLayout extends StatelessWidget {
         Expanded(flex: 6, child: CustomDrower()),
         Expanded(
           flex: 13,
-          child: MiddelSection(),
+          child: Padding(
+            padding: EdgeInsets.all(24.0),
+            child: MiddelSection(),
+          ),
         ),
-        Expanded(flex: 10, child: RightSection()),
+        Expanded(
+            flex: 10,
+            child: Padding(
+              padding: EdgeInsets.only(top: 24, right: 24, bottom: 24),
+              child: RightSection(),
+            )),
       ],
     );
   }

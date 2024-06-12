@@ -12,21 +12,21 @@ class RightSection extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(
         children: [
-          Padding(
-            padding: EdgeInsets.only(top: 24, bottom: 24, right: 24),
-            child: CustomContainer(
-              padding: 0,
-              child: Column(
-                children: [
-                  MyCardSection(),
-                  Divider(
-                    height: 40,
-                    color: Color(0xffF1F1F1),
-                  ),
-                  TransactionHistorySection(),
-                ],
-              ),
+          CustomContainer(
+            padding: 0,
+            child: Column(
+              children: [
+                MyCardSection(),
+                Divider(
+                  height: 40,
+                  color: Color(0xffF1F1F1),
+                ),
+                TransactionHistorySection(),
+              ],
             ),
+          ),
+          SizedBox(
+            height: 24,
           ),
           IncomeSection(),
         ],

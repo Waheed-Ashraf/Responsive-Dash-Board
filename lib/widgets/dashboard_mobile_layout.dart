@@ -14,30 +14,27 @@ class DashBoardMobileLayout extends StatelessWidget {
     return const SingleChildScrollView(
       child: Column(children: [
         AllExpenses(),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 24),
-          child: QuickInvoice(),
+        SizedBox(
+          height: 16,
         ),
-        Padding(
-          padding: EdgeInsets.only(bottom: 24, right: 24, left: 24),
-          child: CustomContainer(
-            padding: 0,
-            child: Column(
-              children: [
-                MyCardSection(),
-                Divider(
-                  height: 40,
-                  color: Color(0xffF1F1F1),
-                ),
-                TransactionHistorySection(),
-              ],
-            ),
+        QuickInvoice(),
+        CustomContainer(
+          padding: 0,
+          child: Column(
+            children: [
+              MyCardSection(),
+              Divider(
+                height: 40,
+                color: Color(0xffF1F1F1),
+              ),
+              TransactionHistorySection(),
+            ],
           ),
         ),
-        Padding(
-          padding: EdgeInsets.only(left: 24),
-          child: IncomeSection(),
+        SizedBox(
+          height: 16,
         ),
+        IncomeSection(),
       ]),
     );
   }
