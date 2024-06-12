@@ -27,17 +27,23 @@ class ActiveExpensisItem extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  width: 60,
-                  height: 60,
-                  decoration: ShapeDecoration(
-                      color: const Color(0xFFFFFFFF).withOpacity(.1),
-                      shape: const OvalBorder()),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      allExpensisItmeModel.headerImg,
-                      colorFilter:
-                          const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                Flexible(
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 60),
+                    child: AspectRatio(
+                      aspectRatio: 1,
+                      child: Container(
+                        decoration: ShapeDecoration(
+                            color: const Color(0xFFFFFFFF).withOpacity(.1),
+                            shape: const OvalBorder()),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            allExpensisItmeModel.headerImg,
+                            colorFilter: const ColorFilter.mode(
+                                Colors.white, BlendMode.srcIn),
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),

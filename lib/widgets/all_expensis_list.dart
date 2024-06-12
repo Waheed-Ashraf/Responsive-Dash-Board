@@ -33,12 +33,11 @@ class _AllExpensisListState extends State<AllExpensisList> {
   Widget build(BuildContext context) {
     return Row(
         children: allExpensisItmeData.asMap().entries.map((e) {
-      int index = e.key;
       var item = e.value;
 
       return Expanded(
           child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
+        padding: const EdgeInsets.symmetric(horizontal: 4),
         child: GestureDetector(
           onTap: () {
             if (currentItem != e.key) {

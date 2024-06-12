@@ -18,7 +18,7 @@ class _DashBoardViewState extends State<DashBoardView> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: MediaQuery.of(context).size.width <= 800
+      appBar: MediaQuery.of(context).size.width <= (800 - 48)
           ? AppBar(
               elevation: 0,
               backgroundColor: const Color(0xffFAFAFA),
@@ -26,7 +26,7 @@ class _DashBoardViewState extends State<DashBoardView> {
                   onPressed: () {
                     scaffoldKey.currentState!.openDrawer();
                   },
-                  icon: Icon(Icons.menu)),
+                  icon: const Icon(Icons.menu)),
             )
           : null,
       backgroundColor: const Color(0xffE5E5E5),

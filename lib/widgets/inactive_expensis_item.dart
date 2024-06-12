@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_dash_board/models/all_expensis_item_model.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
@@ -26,13 +27,19 @@ class InActiveExpensisItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Container(
-                width: 60,
-                height: 60,
-                decoration: const ShapeDecoration(
-                    color: Color(0xfffafafa), shape: OvalBorder()),
-                child: Center(
-                  child: SvgPicture.asset(allExpensisItmeModel.headerImg),
+              Flexible(
+                child: AspectRatio(
+                  aspectRatio: 1,
+                  child: ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 60),
+                    child: Container(
+                      decoration: const ShapeDecoration(
+                          color: Color(0xfffafafa), shape: OvalBorder()),
+                      child: Center(
+                        child: SvgPicture.asset(allExpensisItmeModel.headerImg),
+                      ),
+                    ),
+                  ),
                 ),
               ),
               const Spacer(),
