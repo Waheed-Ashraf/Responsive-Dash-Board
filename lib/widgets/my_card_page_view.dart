@@ -15,7 +15,10 @@ class MyCardsPageView extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       children: List.generate(
         3,
-        (index) => const MyCard(),
+        (index) => const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 8),
+          child: MyCard(),
+        ),
       ),
     );
   }

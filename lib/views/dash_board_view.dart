@@ -30,7 +30,9 @@ class _DashBoardViewState extends State<DashBoardView> {
             )
           : null,
       backgroundColor: const Color(0xffE5E5E5),
-      drawer: const CustomDrower(),
+      drawer: MediaQuery.of(context).size.width <= 800
+          ? const CustomDrower()
+          : null,
       body: AdaptiveLayout(
         mobileLayout: (context) => const DashBoardMobileLayout(),
         tabletLayout: (context) => const DashBoardTabletLayout(),
